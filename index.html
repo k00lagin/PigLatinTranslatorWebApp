@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Поросячья латынь</title>
+</head>
+<body>
+	<div class="ioWrap">
+		<div class="input io">
+			<textarea id="userInput" autofocus wrap="soft"></textarea>
+		</div>
+		<div class="output io"></div>
+	</div>
+	<style type="text/css">
+		.ioWrap
+		{
+			min-height: 30rem;
+			width: 100%;
+		}
+		.io
+		{
+			width: 46%;
+			min-height: 20em;
+			height: calc(100%); 
+			float: left;
+			width: 46vw;
+			min-height: 90vh;
+		}
+		div.output
+		{
+			background: #d8d8d8;
+		}
+		.input
+		{
+			border: 1px solid rgb(183, 183, 183);
+			box-sizing: border-box;
+		}
+		textarea
+		{
+			padding: 0.5em;
+			box-sizing: border-box;
+			width: 100%;
+			resize: none;
+			height: 20em;
+			border: medium solid rgba(123, 123, 123, 0.13);
+			height: calc(90vh - 2em);
+		}
+	</style>
+	<script type="text/javascript">
+		var userInput = document.getElemendById("userInput");
+		userInput.onInput = function(this){this.style.height = (this.value.split("\n").length + 5)+"em"}
+	</script>
+</body>
+</html>
